@@ -1,0 +1,142 @@
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: "outfit",serif;
+    line-height: 1.6;
+    background-color:black;
+    color:white;
+    padding: 1.5vw 2vw;
+}
+.head{
+    font-size: 9.2vh;
+    color: transparent;
+    background: linear-gradient(to top, white,black);
+    -webkit-backdrop-filter: blur(10px);
+    -webkit-background-clip:text;
+    margin: 1.7vw 3vw 3vw 3vw;
+}
+.con h1{
+    font-size: 4vh;
+}
+/* Showcase */
+
+/* Footer */
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #333;
+    text-align: center;
+}
+
+
+.moving-text::-webkit-scrollbar{
+    display: none;
+    }
+    .moving-text{
+    overflow-x:auto ;
+        white-space: nowrap;
+        
+    
+    }
+    
+    .moving-text h1{
+        
+        font-size: 3.5vw;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+        /* background-color: aliceblue; */
+    display: inline-block;
+    font-weight: 600;
+    
+    }
+
+    
+    .con{
+        white-space: nowrap;
+        display: inline-block;
+        /* overflow-x: auto; */
+        animation-name:  scroling;
+        animation-duration: 9s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        
+        
+     
+    }
+    .gola{
+        height: 20px;
+        width: 20px;
+        color: transparent;
+        background:linear-gradient(to top,white,black);
+        
+        border-radius: 50%;
+    display: inline-block;
+    margin: .5vw 2vw;
+    }
+
+    @keyframes scroling {
+        from{
+            transform: translateX(0%);
+        }
+        to{
+            transform: translateX(-100%);
+        }
+        
+    }
+
+.frontend{
+    display: flex;
+    align-items: center;
+    
+}
+.skills{
+    display: flex;
+    padding: 4vw 2vw;
+}
+
+.backend{
+    display: flex;
+    align-items: center;
+}
+
+i{
+    font-size: 9vw;
+    font-weight: 400;
+    transition: .5s all ease;
+color: transparent;
+background: linear-gradient(to left, white , black);
+-webkit-background-clip: text;
+}
+
+i:hover{
+    transition: .5s all ease;
+    scale: 1.1;
+}
+
+@media screen and (max-width:500px) {
+.con h1{
+        font-size: 5.4vh;
+    }
+.moving-text{
+    margin-top:6.4vh ;
+
+    margin-bottom:6.4vh ;
+}
+    .head{
+        margin: 4vw 0;
+    }
+    .skills{
+        margin: 3vw 3vw;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    i{
+        font-size: 11vh  }
+}
