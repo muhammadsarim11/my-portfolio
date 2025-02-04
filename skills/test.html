@@ -6,7 +6,7 @@
     <title>Skills Showcase</title>
     <style>
         body {
-            background: black;
+            background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
             color: white;
             font-family: 'Poppins', sans-serif;
             text-align: center;
@@ -16,12 +16,11 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            overflow: hidden;
         }
         .container {
             display: flex;
             flex-wrap: wrap;
-            gap: 30px;
+            gap: 20px;
             justify-content: center;
             max-width: 1100px;
         }
@@ -35,24 +34,20 @@
             height: 100%;
             position: relative;
             transform-style: preserve-3d;
-            animation: floatCube 3s infinite ease-in-out alternate;
+            animation: rotateCube 6s infinite linear;
         }
         .face {
             position: absolute;
             width: 120px;
             height: 120px;
-            background: linear-gradient(135deg, #111, #333);
+            background: linear-gradient(135deg, #222, #444);
             display: flex;
             justify-content: center;
             align-items: center;
             font-size: 1em;
             font-weight: bold;
-            border-radius: 10px;
+            border-radius: 5px;
             box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
-            border: 2px solid rgba(255, 255, 255, 0.1);
-        }
-        .cube:hover {
-            animation: tiltCube 1s ease-in-out;
         }
         .front  { transform: translateZ(60px); }
         .back   { transform: rotateY(180deg) translateZ(60px); }
@@ -60,36 +55,14 @@
         .right  { transform: rotateY(90deg) translateZ(60px); }
         .top    { transform: rotateX(90deg) translateZ(60px); }
         .bottom { transform: rotateX(-90deg) translateZ(60px); }
-
-        @keyframes floatCube {
-            from { transform: translateY(0px); }
-            to { transform: translateY(-10px); }
-        }
-        @keyframes tiltCube {
-            0% { transform: rotateX(0deg) rotateY(0deg); }
-            50% { transform: rotateX(10deg) rotateY(10deg); }
-            100% { transform: rotateX(0deg) rotateY(0deg); }
-        }
-
-        .head{
-            text-transform: capitalize;
-            color: transparent;
-            background: linear-gradient(to top, white,rgb(21, 21, 21));
-            -webkit-background-clip: text;
-        padding: 30px 40px;
-        background-color: #333;
-        border-radius: 10px;
-        border: 1px solid white;
-
+        @keyframes rotateCube {
+            from { transform: rotateX(0deg) rotateY(0deg); }
+            to { transform: rotateX(360deg) rotateY(360deg); }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="head">
-        <h1 >things im good at</h1>
-
-        </div>
         <div class="cube-container">
             <div class="cube">
                 <div class="face front">HTML</div>

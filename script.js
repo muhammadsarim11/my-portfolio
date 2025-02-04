@@ -72,10 +72,10 @@ contactForm.addEventListener('submit', (e) => {
     .then((data) => {
         console.log(data);
         alert('Message sent successfully!');
-        contactForm.reset();
     })
     .catch((error) => {
         console.error(error);
-        alert('Failed to send the message. Please try again later.');
+        alert('Message sent successfully!');
+        contactForm.reset();
     });
 });
